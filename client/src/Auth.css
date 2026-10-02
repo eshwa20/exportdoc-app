@@ -1,0 +1,164 @@
+/* 1. Reset and Full screen wrapper */
+.auth-main-container {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 2. Main Card */
+.auth-split-card {
+    background: white;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 600px;
+    height: 85vh;
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* 3. Left Side: Illustration */
+.auth-illustration {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.auth-illustration img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* 4. Right Side: Form Section */
+.auth-form-section {
+    flex: 1;
+    padding: 80px 50px 50px 50px; /* Space for the logo at the top */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+}
+
+/* Branding Logo */
+.auth-logo {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+.form-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #000;
+    font-weight: 700;
+}
+
+/* 5. Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 70px 15px 20px;
+    background-color: #e5e5e5;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #000 !important;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    background-color: #fff;
+    border-color: #000;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.view-toggle {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+/* 6. Error Text styling */
+.error-text {
+    color: #d93025;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #fce8e6;
+    border-radius: 8px;
+    border: 1px solid #f5c2c7;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 7. Buttons and Links */
+.auth-submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.navigation-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.toggle-auth {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .auth-illustration { display: none; }
+    .auth-split-card { max-width: 450px; height: auto; }
+    .auth-logo { left: 30px; top: 30px; }
+}
